@@ -30,14 +30,14 @@ public class MainPanel extends JFrame {
         button1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                set_player(button1);
+                setPlayer(button1);
             }
         });
 
         button2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                set_player(button2);
+                setPlayer(button2);
                 checkWinner();
             }
         });
@@ -45,7 +45,7 @@ public class MainPanel extends JFrame {
         button3.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                set_player(button3);
+                setPlayer(button3);
                 checkWinner();
             }
         });
@@ -53,7 +53,7 @@ public class MainPanel extends JFrame {
         button4.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                set_player(button4);
+                setPlayer(button4);
                 checkWinner();
             }
         });
@@ -61,7 +61,7 @@ public class MainPanel extends JFrame {
         button5.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                set_player(button5);
+                setPlayer(button5);
                 checkWinner();
             }
         });
@@ -69,7 +69,7 @@ public class MainPanel extends JFrame {
         button6.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                set_player(button6);
+                setPlayer(button6);
                 checkWinner();
             }
         });
@@ -77,7 +77,7 @@ public class MainPanel extends JFrame {
         button7.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                set_player(button7);
+                setPlayer(button7);
                 checkWinner();
             }
         });
@@ -85,7 +85,7 @@ public class MainPanel extends JFrame {
         button8.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                set_player(button8);
+                setPlayer(button8);
                 checkWinner();
             }
         });
@@ -93,7 +93,7 @@ public class MainPanel extends JFrame {
         button9.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                set_player(button9);
+                setPlayer(button9);
                 checkWinner();
             }
         });
@@ -198,14 +198,16 @@ public class MainPanel extends JFrame {
         button9.setBackground(Color.GREEN);
     }
 
-    private void set_player(JButton button) {
+    private void setPlayer(JButton button) {
         if (!button.getText().equals("-")) {
             return;
         }
         if (player1IsPlay) {
             button.setText("X");
+            button.setBackground(Color.MAGENTA);
         } else {
             button.setText("O");
+            button.setBackground(Color.ORANGE);
         }
         player1IsPlay = !player1IsPlay;
     }
