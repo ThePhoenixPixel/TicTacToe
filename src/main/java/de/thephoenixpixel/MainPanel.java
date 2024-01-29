@@ -140,7 +140,7 @@ public class MainPanel extends JFrame {
 
         // Check for a tie
         if (isBoardFull()) {
-            announceWinner("Tie");
+            noOneWins();
         }
     }
 
@@ -156,6 +156,11 @@ public class MainPanel extends JFrame {
 
     private void announceWinner(String winner) {
         JOptionPane.showMessageDialog(null, "Player " + winner + " wins!");
+        setDefaultButtons();
+    }
+
+    private void noOneWins() {
+        JOptionPane.showMessageDialog(null, "No one wins");
         setDefaultButtons();
     }
 
